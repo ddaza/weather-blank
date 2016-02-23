@@ -1,0 +1,35 @@
+<ion-view view-title="Search">
+  <ion-content>
+    <div class="list">
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" ng-change='change(query)'
+          placeholder="Look for a place" ng-model='query'>
+        </label>
+        <button class="button button-small" type="submit" ng-click="search(query)">
+          Search
+        </button>
+      </div>
+    </div>
+    <div>
+      <div>
+        {{weather.address}}
+      </div>
+      <div>
+        {{weather.currently.summary}}
+      </div>
+      <div>
+        temperature: {{weather.currently.temperature}}
+      </div>
+      <div>
+        humidity: {{weather.currently.humidity}}
+      </div>
+      <div>
+        wind speed: {{weather.currently.windSpeed}}
+      </div>
+      <div>
+        precipitation probability: {{weather.currently.precipProbability}}
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
